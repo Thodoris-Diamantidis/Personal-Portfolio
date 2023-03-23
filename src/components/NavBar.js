@@ -6,22 +6,22 @@ import navIcon2 from '../assets/images/nav-icon2.svg'
 import navIcon3 from '../assets/images/nav-icon3.svg'
 
 export const NavBar = () => {
-    const {activeLink, setActiveLink} = useState('home')
-    const {scrolled, setScrolled} = useState(false)
+  const [activeLink, setActiveLink] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
 
-    //React Hook useEffect για να παρακολουθήσει την κύλιση της σελίδας. Ουσιαστικά, αυτό σημαίνει ότι όταν ο χρήστης κυλάει τη σελίδα, ο κώδικας εκτελείται.
-    useEffect(() => {
-        const onScroll = () => {
-            if (window.scrollY > 50){
-                setScrolled(true)
-            }else {
-                setScrolled(false)
-            }
-        }
-        window.addEventListener("scroll", onScroll)
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
 
-        return () => window.removeEventListener("scroll", onScroll)
-    },[])
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [])
 
     const onUpdateActiveLink = (value) => {
         setActiveLink(value)
@@ -44,9 +44,9 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-                <a href="#"> <img src={navIcon1} alt=""/> </a>
-                <a href="#"> <img src={navIcon2} alt=""/> </a>
-                <a href="#"> <img src={navIcon3} alt=""/> </a>
+                <a href="#"> <img src={navIcon1} alt="image"/> </a>
+                <a href="#"> <img src={navIcon2} alt="image"/> </a>
+                <a href="#"> <img src={navIcon3} alt="image"/> </a>
             </div>
             <button className="vvd" onClick={ () => console.log('connect')}>Let's Connect</button>
           </span>
