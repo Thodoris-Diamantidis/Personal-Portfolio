@@ -64,18 +64,6 @@ export const Projects = () => {
                                     </Row>
                                 </Tab.Pane>
                                 <Tab.Pane event="second">Leren Ipsum</Tab.Pane>
-                                <Row>
-                                        {
-                                            projects.map( (project, index) => {
-                                                return (
-                                                    <ProjectCard
-                                                        key={index}
-                                                        {...project}
-                                                    />
-                                                )
-                                            })
-                                        }
-                                    </Row>
                                 <Tab.Pane event="third">Loren Ipsum</Tab.Pane>
                             </Tab.Content>
                             </TabContainer>
