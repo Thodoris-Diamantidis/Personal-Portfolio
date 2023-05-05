@@ -2,7 +2,11 @@ import { useState, useEffect} from 'react'
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightSquare} from 'react-bootstrap-icons'
-import headerImg from '../assets/images/header-img.svg'
+import headerImg from '../assets/images/astronaut.svg'
+import { HashLink } from 'react-router-hash-link';
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
 
 export function Banner() {
   const [loopNum, setLoopNum] = useState(0)
@@ -41,6 +45,7 @@ export function Banner() {
     }
   }
   return (
+    <Router>
     <section className='banner' id='home'>
         <Container>
             <Row className='align-items-center'>
@@ -52,8 +57,11 @@ export function Banner() {
                         During my time in college, I've learned a ton about programming languages,
                         computer systems, and all sorts of tech stuff. I enjoy trying out new ideas
                         and seeing what I can build with my skills. I can't wait to graduate and start
-                        my career as a computer engineer, where I hope to help make the world a better place with technology.</p>
-                    <button onClick={ () => console.log('connent')}>Let's connect <ArrowRightSquare size={25}/></button>
+                        my career as a computer engineer, where I hope to help make the world a better place with technology.
+                    </p>
+                    <HashLink to="#connect">
+                        <button className='vvd'><span>Let's connect </span><ArrowRightSquare size={25}/></button>
+                    </HashLink>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
                     <img src={headerImg} alt="Header Image"/>
@@ -61,5 +69,6 @@ export function Banner() {
             </Row>
         </Container>
     </section>
+    </Router>
   )
 }
