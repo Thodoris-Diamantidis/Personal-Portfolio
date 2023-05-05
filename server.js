@@ -9,14 +9,12 @@ app.use(cors())
 app.use(express.json())
 app.use("/", router)
 app.listen(5000, ()=> console.log("Server Running"))
-console.log(process.env.EMAIL_USER)
-console.log(process.env.EMAIL_PASS)
 
 const contactEmail = nodemailer.createTransport({
     service: 'hotmail',
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD
     }
 })
 
