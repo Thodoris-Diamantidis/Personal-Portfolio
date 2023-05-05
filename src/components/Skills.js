@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel'
 import "react-multi-carousel/lib/styles.css"
 import meter2 from "../assets/images/meter2.svg"
 import meter3 from "../assets/images/meter3.svg"
+import meter1 from "../assets/images/meter1.svg"
 import colorSharp from "../assets/images/color-sharp.png"
 
 export const Skills = () => {
@@ -35,10 +36,12 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p>In publishing and graphic design, Lorem ipsum is a placeholder text
-                            commonly used to demonstrate the visual form of a document or a 
-                            typeface without relying on meaningful content. Lorem ipsum may be 
-                            used as a placeholder before final copy is available
+                            <p>I have experience in web design and web development, using technologies such as React and Node.
+                                js to create dynamic and responsive web applications. I am familiar with front-end
+                                development frameworks and have a good understanding of web design principles. In addition,
+                                I have knowledge of Python and Java programming languages and have used them to develop
+                                various software applications. Overall, I am a versatile software developer with experience
+                                in multiple technologies and a passion for creating innovative solutions
                             </p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
@@ -48,11 +51,11 @@ export const Skills = () => {
 
                                 <div className="item">
                                     <img src={meter2} alt="Image"/>
-                                    <h5>Empty</h5>
+                                    <h5>Java</h5>
                                 </div>
 
                                 <div className="item">
-                                    <img src={meter3} alt="Image"/>
+                                    <img src={meter2} alt="Image"/>
                                     <h5>Python</h5>
                                 </div>
 
