@@ -22,9 +22,24 @@ export const Projects = () => {
 
         {
             title: "Currently working on",
-            description: "There is more projects on the way.",
+            description: "A django-react project(kinda like spotify)",
             imgUrl: chatBotImage,
             url: "EMPTY"
+        }
+    ]
+
+    const projects2 = [
+         {
+            title: "My Personal ToDoList",
+            description: " Its a simple web application that allows users to create and manage their to-do lists. The project is built using HTML, CSS, and JavaScript, and it uses localStorage to store the user's to-do items. Users can add, edit, and delete items, as well as mark them as complete. The application has a clean and user-friendly interface and can be easily customized and extended to suit different needs.",
+            imgUrl: chatBotImage,
+            url: "https://github.com/Thodoris-Diamantidis/todolist"
+        },
+        {
+            title: "More to come soon",
+            description: "No description.",
+            imgUrl: chatBotImage,
+            url: "null"
         }
     ]
 
@@ -66,8 +81,21 @@ export const Projects = () => {
                                         }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane event="second">Leren Ipsum</Tab.Pane>
-                                <Tab.Pane event="third">Loren Ipsum</Tab.Pane>
+                                <Tab.Pane eventKey="second">
+                                    <Row>
+                                        {
+                                            projects2.map( (project, index) => {
+                                                return(
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="third">Loren Ipsum</Tab.Pane>
                             </Tab.Content>
                             </TabContainer>
                         </Col>
