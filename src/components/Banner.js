@@ -51,13 +51,13 @@ export function Banner() {
             <Row className='align-items-center'>
                 <Col xs={12} md={6} xl={7}>
                     <span className='tagline'>Welcome to my Portfolio</span>
-                    <h1>Hi I'm Theodore <span className='wrap'>{text}</span></h1>
-                    <p>Hey there! I'm a college student studying computer engineering.
+                    <h1>Hi I'm Theodore Diamantidis <span className='wrap'>{text}</span></h1>
+                    <p>Hey there! I'm a college student studying computer engineering and Electronic engineering in sindos.
                         I love creating cool stuff with technology and am almost done with college.
                         During my time in college, I've learned a ton about programming languages,
                         computer systems, and all sorts of tech stuff. I enjoy trying out new ideas
                         and seeing what I can build with my skills. I can't wait to graduate and start
-                        my career as a computer engineer, where I hope to help make the world a better place with technology.
+                        my career as a computer engineer, where I hope to help make an impact in the world.
                     </p>
                     <HashLink to="#connect">
                         <button className='vvd'><span>Let's connect </span><ArrowRightSquare size={25}/></button>
