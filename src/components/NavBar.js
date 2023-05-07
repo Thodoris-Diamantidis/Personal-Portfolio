@@ -51,7 +51,7 @@ export const NavBar = () => {
             <div className="social-icon">
                 <a> <img src={navIcon1} alt="LinkedIn"/> </a>
                 <a> <img src={navIcon2} alt="Facebook"/> </a>
-                <a href="https://www.instagram.com/teo_diamantidis/"> <img src={navIcon3} alt="Instagram"/> </a>
+                <a> <img src={navIcon3} alt="Instagram"/> </a>
             </div>
             <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
